@@ -12,6 +12,11 @@ created = db.Column(db.TIMESTAMP, nullable=False, default=datetime.utcnow)
 title = db.Column(db.String(120), nullable=False)
 body = db.Column(db.Text, nullable=False)
 
+likes = db.relationship('Like', back_populates='post', passive_deletes=True)
+
+author_id = db.Column(db.Integer, db.ForeignKey('user.id',ondelete="CASCADE"), nullable=False)
+author = db.relationship('User', back_populates='posts')
+ 
 
 class User
 
