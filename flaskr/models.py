@@ -30,6 +30,10 @@ class Like(db.Model):
 id = db.Column(db.Integer, primary_key=True)
 created = db.Column(db.TIMESTAMP, nullable=False, default=datetime.utcnow)
 
+author_id = db.Column(db.Integer, db.ForeignKey(
+        'user.id', ondelete="CASCADE"), nullable=False)
+    author = db.relationship('User', back_populates='likes')
+
 
 @login_manager.user_loader
 def user_loader(user_id):
