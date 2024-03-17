@@ -6,12 +6,14 @@ from flask_login import  LoginManager
 db = SQLAlchemy()
 login_manager = LoginManager()
 
-class User
+class Post
 id = db.Column(db.Integer, primary_key=True)
 created = db.Column(db.TIMESTAMP, nullable=False, default=datetime.utcnow)
+title = db.Column(db.String(120), nullable=False)
+body = db.Column(db.Text, nullable=False)
 
 
-class Post
+class User
 
 
 
