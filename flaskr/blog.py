@@ -5,6 +5,7 @@ from flask import redirect
 from flask import render_template
 from flask import request
 from flask import url_for
+from flask import jsonify
 from werkzeug.exceptions import abort
 from flask_login import login_required, current_user
 from .models import Post,db, Like
