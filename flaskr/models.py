@@ -19,7 +19,7 @@ author = db.relationship('User', back_populates='posts')
  
 
 class User
-
+id = db.Column(db.Integer, primary_key=True)
 
 
 class Like
