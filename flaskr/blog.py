@@ -6,9 +6,9 @@ from flask import render_template
 from flask import request
 from flask import url_for
 from werkzeug.exceptions import abort
+from flask_login import login_required, current_user
+from .models import Post,db, Like
 
-from .auth import login_required
-from .db import get_db
 
 bp = Blueprint("blog", __name__)
 
