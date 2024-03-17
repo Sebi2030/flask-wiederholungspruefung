@@ -7,7 +7,8 @@ db = SQLAlchemy()
 login_manager = LoginManager()
 
 class User
-
+id = db.Column(db.Integer, primary_key=True)
+created = db.Column(db.TIMESTAMP, nullable=False, default=datetime.utcnow)
 
 
 class Post
