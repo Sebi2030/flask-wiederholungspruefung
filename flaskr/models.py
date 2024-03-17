@@ -24,6 +24,7 @@ username = db.Column(db.String(80), unique=True, nullable=False)
 password = db.Column(db.String(120), nullable=False)
 
 posts = db.relationship('Post', back_populates='author', passive_deletes=True)
+likes = db.relationship('Like', back_populates='author', passive_deletes=True)
 
 
 class Like(db.Model):
