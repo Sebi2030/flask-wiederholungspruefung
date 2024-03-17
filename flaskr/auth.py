@@ -1,5 +1,3 @@
-import functools
-
 from flask import Blueprint
 from flask import flash
 from flask import g
@@ -10,6 +8,9 @@ from flask import session
 from flask import url_for
 from werkzeug.security import check_password_hash
 from werkzeug.security import generate_password_hash
+from flask_login import login_user,logout_user
+from sqlalchemy import exc
+from .models import User,db
 
 from .db import get_db
 
