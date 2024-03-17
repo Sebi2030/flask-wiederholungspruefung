@@ -34,6 +34,10 @@ author_id = db.Column(db.Integer, db.ForeignKey(
         'user.id', ondelete="CASCADE"), nullable=False)
     author = db.relationship('User', back_populates='likes')
 
+post_id = db.Column(db.Integer, db.ForeignKey(
+        'post.id', ondelete="CASCADE"), nullable=False)
+    post = db.relationship('Post', back_populates='likes')
+
 
 @login_manager.user_loader
 def user_loader(user_id):
