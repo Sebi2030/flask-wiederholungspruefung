@@ -1,12 +1,12 @@
 ---
-title: Value Proposition
+title: Aufgabe 1
 nav_order: 1
 ---
 
 {: .label }
 [Jane Dane]
 
-# [Value proposition]
+# [Aufgabe 1/3: SQLAlchemy und Flask-Login]
 {: .no_toc }
 
 <details open markdown="block">
@@ -16,10 +16,10 @@ nav_order: 1
 {: toc }
 </details>
 
-## [The problem]
+## [1. SQLAlchemy]
 
-## [Our solution]
+## [2. Decision Record]
 
-## [Target user]
+## [3. Flask-Login]
 
-## [Customer journey]
+## [4. Decision Record]
