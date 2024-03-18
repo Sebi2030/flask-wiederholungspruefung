@@ -58,7 +58,6 @@ Die Optimierungen von Flask-SQLAlchemy für größere Projekte stellen sicher, d
 Es könnte einige Zeit dauern, bis ich mich mit den ORM-Konzepten und Best Practices von Flask-SQLAlchemy vertraut gemacht habe. Dies kann jedoch durch Schulungssitzungen und die Nutzung verfügbarer Dokumentationsressourcen gemildert werden.
 ## Migrationsaufwand: 
 Die Migration von SQLite3 zu Flask-SQLAlchemy erfordert Anstrengungen, um den vorhandenen datenbankbezogenen Code zu aktualisieren und die Kompatibilität mit dem neuen ORM-basierten Ansatz sicherzustellen.
-
 # Fazit
 Die Einführung von Flask-SQLAlchemy als Datenbanklösung entspricht den Projektzielen von Skalierbarkeit, Wartbarkeit und Kompatibilität mit dem Flask-Ökosystem. Diese Entscheidung ermöglicht es mir, ORM-Fähigkeiten zu nutzen, die Codeorganisation zu verbessern und den langfristigen Erfolg und die Skalierbarkeit meiner Flask-Anwendung zu gewährleisten.
 
