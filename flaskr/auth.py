@@ -66,7 +66,8 @@ def register():
                 )
                 db.session.add(new_user)
                 db.session.commit()
-            except db.IntegrityError:
+            except exc.IntegrityError:
+                db.session.rollback()
                 # The username was already taken, which caused the
                 # commit to fail. Show a validation error.
                 error = f"User {username} is already registered."
