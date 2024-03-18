@@ -6,7 +6,7 @@ nav_order: 1
 {: .label }
 Sebastian Nieme
 
-# [Aufgabe 2/3: Like-Button]
+# [Aufgabe 3/3:  RESTful API]
 {: .no_toc }
 
 <details open markdown="block">
@@ -16,8 +16,10 @@ Sebastian Nieme
 {: toc }
 </details>
 
-## [5. Implementieren Sie einen Like-Button für einzelne Blog-Posts]
+## [7. Erstellen Sie ein RESTful API]
 
-## [6. Decision Record]
+## [8. Decision Record]
+
+## [9. API-Referenz-Dokumentation] 
 
 
