@@ -105,8 +105,7 @@ def delete(id):
     Ensures that the post exists and that the logged in user is the
     author of the post.
     """
-    get_post(id)
-    db = get_db()
-    db.execute("DELETE FROM post WHERE id = ?", (id,))
-    db.commit()
+    post = get_post(id)
+    db.session.delete(post)
+    db.session.commit()
     return redirect(url_for("blog.index"))
