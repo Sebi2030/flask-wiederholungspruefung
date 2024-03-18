@@ -1,13 +1,12 @@
 ---
-title: App Structure
-parent: Technical Docs
+title: Aufgabe 2
 nav_order: 1
 ---
 
 {: .label }
-[Jane Dane]
+Sebastian Nieme
 
-# [App structure, incl. context]
+# [Aufgabe 2/3: Like-Button]
 {: .no_toc }
 
 <details open markdown="block">
@@ -16,3 +15,9 @@ nav_order: 1
 + ToC
 {: toc }
 </details>
+
+## [1. Implementieren Sie einen Like-Button für einzelne Blog-Posts]
+
+## [2. Decision Record]
+
+
