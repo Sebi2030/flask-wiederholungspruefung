@@ -60,10 +60,10 @@ def create():
         if error is not None:
             flash(error)
         else:
-            db = get_db()
-            db.execute(
-                "INSERT INTO post (title, body, author_id) VALUES (?, ?, ?)",
-                (title, body, g.user["id"]),
+            new_post = Post(
+                title=title,
+                body=body,
+                author_id=current_user.id
             )
             db.commit()
             return redirect(url_for("blog.index"))
