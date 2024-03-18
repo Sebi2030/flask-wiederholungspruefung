@@ -25,7 +25,7 @@ In der model.py-Datei habe ich Flask-SQLAlchemy und Flask-Login initialisiert. A
 
 In der Datei blog.py habe ich den veralteten Datenbankcode entfernt. Stattdessen habe ich in der blog.py-Datei neuen Code gemäß der Flask-SQLAlchemy-Struktur geschrieben. Dies umfasst die Implementierung von Funktionen zum Erstellen, Aktualisieren und Löschen von Blog-Posts um die Benutzerinteraktion zu verbessern und die Benutzererfahrung zu optimieren. Zuletzt habe ich die Datei db.py gelöscht, da diese nicht mehr benötigt wird. Zu einer späteren Zeit wird dann noch die Funktion hinzukommen Posts zu liken.
 
-## [2. Decision Record]
+## 2. Decision Record
 # Einführung von Flask-SQLAlchemy zur Datenbankintegration in die Flask-Anwendung
 
 # Status
