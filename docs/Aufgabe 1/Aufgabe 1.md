@@ -4,7 +4,7 @@ nav_order: 1
 ---
 
 {: .label }
-[Jane Dane]
+[Sebastian Nieme]
 
 # [Aufgabe 1/3: SQLAlchemy und Flask-Login]
 {: .no_toc }
