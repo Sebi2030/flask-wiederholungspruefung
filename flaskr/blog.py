@@ -65,7 +65,8 @@ def create():
                 body=body,
                 author_id=current_user.id
             )
-            db.commit()
+            db.session.add(new_post)
+            db.session.commit()
             return redirect(url_for("blog.index"))
 
     return render_template("blog/create.html")
