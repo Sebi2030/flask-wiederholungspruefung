@@ -97,8 +97,7 @@ def login():
 
         if error is None:
             # store the user id in a new session and return to the index
-            session.clear()
-            session["user_id"] = user["id"]
+            login_user(user, remember=remember)
             return redirect(url_for("index"))
 
         flash(error)
