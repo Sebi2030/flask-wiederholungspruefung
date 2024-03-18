@@ -64,5 +64,6 @@ Die Einführung von Flask-SQLAlchemy als Datenbanklösung entspricht den Projekt
 
 
 ## 3. Flask-Login
+Um Funktionen wie Anmeldung, Registrierung und Abmeldung mit Flask-Login und mit SQLAlchemy Syntax nutzen zu können, habe diese in der auth.py-Datei umgeschrieben und angepasst. Ich habe Flask-Login genutzt, um sicherzugehen, dass ausschließlich angemeldete Benutzer Blogbeiträge erstellen, bearbeiten und löschen können. Ich habe auch eine „Remember me“-Funktionalität eingebaut, damit auch nach dem Verlassen der Website die Nutzer eingeloggt bleiben können. Dabei änderte ich den Code in auth.py und fügte die erforderlichen Funktionen hinzu, damit diese Funktionalität möglich ist. Darüber hinaus habe ich sämtlichen unnötigen Code beseitigt, der aufgrund der Implementierung der Flask-Login nicht mehr nötig war, um die Codebasis sauber und wartbar zu halten. 
 
 ## 4. Decision Record
