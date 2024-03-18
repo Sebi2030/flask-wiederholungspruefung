@@ -77,3 +77,19 @@ In meinem Flask-Webanwendungsprojekt verwende ich derzeit eine sitzungsbasierte 
 
 # Entscheidung
 Nach sorgfältiger Überlegung und Bewertung habe ich mich entschieden, Flask-Login für die Benutzerauthentifizierung in meiner Flask-Anwendung zu implementieren. Diese Entscheidung ist durch mehrere Faktoren motiviert:
+
+## Sicherheit: 
+Flask-Login bietet sichere Mechanismen zur Benutzerauthentifizierung, einschließlich Passwort-Hashing und Schutz vor gängigen Sicherheitslücken wie CSRF-Angriffen.
+## Skalierbarkeit: 
+Flask-Login vereinfacht die Verwaltung der Benutzerauthentifizierung und lässt sich nahtlos in Flask integrieren, was die Skalierung der Anwendung bei steigenden Benutzerzahlen erleichtert.
+## Wartbarkeit: 
+Die Nutzung der in Flask-Login integrierten Funktionen für die Benutzerauthentifizierung reduziert die Komplexität der Implementierung benutzerdefinierter Authentifizierungslösungen, was zu einer besseren Codeorganisation und Wartbarkeit führt.
+## Flexibel: 
+Flask-Login bietet Flexibilität bei der Handhabung von Benutzersitzungen, ermöglicht die Anpassung an die Projektanforderungen und bietet Unterstützung für verschiedene Authentifizierungsmethoden.
+# Konsequenzen
+### Die Implementierung von Flask-Login für die Benutzerauthentifizierung hat die folgenden Konsequenzen:
+
+## Verbesserte Sicherheit: 
+Die in Flask-Login eingebauten Sicherheitsfunktionen verbessern die allgemeine Sicherheitslage der Anwendung und verringern das Risiko von unbefugtem Zugriff und Datenverletzungen.
+## Vereinfachte Entwicklung: 
+Flask-Login vereinfacht die Verwaltung der Benutzerauthentifizierung und reduziert die Entwicklungszeit und den Aufwand für die Implementierung und Pflege der Benutzerauthentifizierungsfunktionen.
