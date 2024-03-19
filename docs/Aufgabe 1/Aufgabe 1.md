@@ -87,7 +87,6 @@ Die Nutzung der in Flask-Login integrierten Funktionen für die Benutzerauthenti
 ## Flexibel: 
 Flask-Login bietet Flexibilität bei der Handhabung von Benutzersitzungen, ermöglicht die Anpassung an die Projektanforderungen und bietet Unterstützung für verschiedene Authentifizierungsmethoden.
 # Konsequenzen
-### Die Implementierung von Flask-Login für die Benutzerauthentifizierung hat die folgenden Konsequenzen:
 
 ## Verbesserte Sicherheit: 
 Die in Flask-Login eingebauten Sicherheitsfunktionen verbessern die allgemeine Sicherheitslage der Anwendung und verringern das Risiko von unbefugtem Zugriff und Datenverletzungen.
