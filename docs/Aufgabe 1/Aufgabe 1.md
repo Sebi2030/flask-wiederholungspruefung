@@ -72,7 +72,7 @@ Um Funktionen wie Anmeldung, Registrierung und Abmeldung mit Flask-Login und mit
 # Status
 Vorgeschlagen
 
-Kontext
+# Kontext
 In meinem Flask-Webanwendungsprojekt verwende ich derzeit eine sitzungsbasierte Authentifizierung für die Benutzerverwaltung. Da sich die Projektanforderungen jedoch weiterentwickeln, muss der Mechanismus zur Benutzerauthentifizierung neu bewertet werden, um Sicherheit, Skalierbarkeit und Wartbarkeit zu gewährleisten.
 
 # Entscheidung
