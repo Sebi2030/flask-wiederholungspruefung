@@ -113,3 +113,7 @@ def delete(id):
 
 @bp.route("/like-post/<post_id>", methods=['POST'])
 @login_required
+def like(post_id):
+    post = Post.query.filter_by(id=post_id).first()
+    like = Like.query.filter_by(
+        author=current_user, post_id=post_id).first() 
