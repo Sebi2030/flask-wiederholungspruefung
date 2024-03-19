@@ -6,11 +6,8 @@ nav_order: 0
 
 # Wiederholungsprüfung
 
-[]
 
-
-
-### [Sebastian Nieme]
+### Sebastian Nieme
 
 
 
