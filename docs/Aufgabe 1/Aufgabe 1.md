@@ -16,7 +16,7 @@ Sebastian Nieme
 {: toc }
 </details>
 
-## 1. SQLAlchemy
+# 1. SQLAlchemy
 Zuerst habe ich Flask-SQLAlchemy und Flask-Login installiert, um die Interaktion mit der Datenbank und die Benutzerauthentifizierung zu erleichtern.
 
  Ich habe eine model.py-Datei im Verzeichnis flaskr erstellt. Dies ermöglicht eine bessere Organisation der Datenbankmodelle und der Authentifizierungsfunktionen an einem zentralen Ort.
@@ -25,76 +25,76 @@ In der model.py-Datei habe ich Flask-SQLAlchemy und Flask-Login initialisiert. A
 
 In der Datei blog.py habe ich den veralteten Datenbankcode entfernt. Stattdessen habe ich in der blog.py-Datei neuen Code gemäß der Flask-SQLAlchemy-Struktur geschrieben. Dies umfasst die Implementierung von Funktionen zum Erstellen, Aktualisieren und Löschen von Blog-Posts um die Benutzerinteraktion zu verbessern und die Benutzererfahrung zu optimieren. Zuletzt habe ich die Datei db.py gelöscht, da diese nicht mehr benötigt wird. Zu einer späteren Zeit wird dann noch die Funktion hinzukommen Posts zu liken.
 
-## 2. Decision Record
-# Einführung von Flask-SQLAlchemy zur Datenbankintegration in die Flask-Anwendung
+# 2. Decision Record
+## Einführung von Flask-SQLAlchemy zur Datenbankintegration in die Flask-Anwendung
 
-# Status
+## Status
 Vorgeschlagen
 
-# Kontext
+## Kontext
 In meinem vorgeschriebenen Flask-Webanwendungsprojekt wird derzeit SQLite3 direkt zur Datenbankintegration verwendet. Mit zunehmender Komplexität des Projekts besteht jedoch die Notwendigkeit, die Datenbanklösung neu zu bewerten, um Skalierbarkeit, Wartbarkeit und Kompatibilität mit dem Flask-Ökosystem zu gewährleisten. Außerdem besteht die Anforderung im Projekt darin die vorhandenen CRUD-Operationen durch geeignete SQLAlchemy-Methoden zu ersetzen.
 
-# Entscheidung
+## Entscheidung
 Nach sorgfältiger Überlegung und Bewertung habe ich beschlossen, Flask-SQLAlchemy als Datenbanklösung für meine Flask-Anwendung zu übernehmen. Diese Entscheidung wird durch mehrere Faktoren motiviert:
 
-## ORM-Fähigkeiten: 
+### ORM-Fähigkeiten: 
 Flask-SQLAlchemy bietet leistungsstarke Object-Relational Mapping (ORM)-Fähigkeiten, die Datenbankinteraktionen vereinfachen und die Codelesbarkeit und -wartbarkeit verbessern, indem sie mit Python-Objekten anstelle von Roh-SQL-Abfragen arbeiten.
-## Flexibilität und Kompatibilität: 
+### Flexibilität und Kompatibilität: 
 Flask-SQLAlchemy integriert nahtlos mit Flask und bietet umfangreiche Unterstützung für verschiedene Flask-Erweiterungen. Diese Kompatibilität gewährleistet eine reibungslosere Integration mit anderen Flask-Komponenten und erleichtert die zukünftige Erweiterung und Verbesserung der Anwendung.
-## Skalierbarkeit: 
+### Skalierbarkeit: 
 Während SQLite3 für kleine Anwendungen geeignet ist, bietet Flask-SQLAlchemy bessere Skalierbarkeit und Leistungsoptimierungen, was es für größere Projekte mit höheren Anforderungen an die Parallelität geeigneter macht.
-## Community-Unterstützung: 
+### Community-Unterstützung: 
 Flask-SQLAlchemy verfügt über eine lebhafte Community und umfangreiche Dokumentation, die Ressourcen und Unterstützung für die Fehlerbehebung und Implementierung von bewährten Verfahren bereitstellt.
-## Codeorganisation:
+### Codeorganisation:
 Die Nutzung der ORM-Fähigkeiten von Flask-SQLAlchemy führt zu einer besseren Codeorganisation und -wartbarkeit, was die Komplexität des mit der Datenbank verbundenen Codes reduziert und die Gesamtwartbarkeit des Projekts verbessert.
 
-# Konsequenzen
+## Konsequenzen
 
-## Verbesserte Entwicklungsworkflow: 
+### Verbesserte Entwicklungsworkflow: 
 Die Nutzung der ORM-Fähigkeiten von Flask-SQLAlchemy wird die Datenbankinteraktionen optimieren, was die Entwicklungszeit reduziert und die Produktivität steigert.
-## Erhöhte Skalierbarkeit: 
+### Erhöhte Skalierbarkeit: 
 Die Optimierungen von Flask-SQLAlchemy für größere Projekte stellen sicher, dass meine Anwendung effektiv skalieren kann, um zukünftiges Wachstum und gesteigerten Traffic zu bewältigen.
-## Lernkurve: 
+### Lernkurve: 
 Es könnte einige Zeit dauern, bis ich mich mit den ORM-Konzepten und Best Practices von Flask-SQLAlchemy vertraut gemacht habe. Dies kann jedoch durch Schulungssitzungen und die Nutzung verfügbarer Dokumentationsressourcen gemildert werden.
-## Migrationsaufwand: 
+### Migrationsaufwand: 
 Die Migration von SQLite3 zu Flask-SQLAlchemy erfordert Anstrengungen, um den vorhandenen datenbankbezogenen Code zu aktualisieren und die Kompatibilität mit dem neuen ORM-basierten Ansatz sicherzustellen.
-# Fazit
+## Fazit
 Die Einführung von Flask-SQLAlchemy als Datenbanklösung entspricht den Projektzielen von Skalierbarkeit, Wartbarkeit und Kompatibilität mit dem Flask-Ökosystem. Diese Entscheidung ermöglicht es mir, ORM-Fähigkeiten zu nutzen, die Codeorganisation zu verbessern und den langfristigen Erfolg und die Skalierbarkeit meiner Flask-Anwendung zu gewährleisten.
 
 
 
-## 3. Flask-Login
+# 3. Flask-Login
 Um Funktionen wie Anmeldung, Registrierung und Abmeldung mit Flask-Login und mit SQLAlchemy Syntax nutzen zu können, habe diese in der auth.py-Datei umgeschrieben und angepasst. Ich habe Flask-Login genutzt, um sicherzugehen, dass ausschließlich angemeldete Benutzer Blogbeiträge erstellen, bearbeiten und löschen können. Ich habe auch eine „Remember me“-Funktionalität eingebaut, damit auch nach dem Verlassen der Website die Nutzer eingeloggt bleiben können. Dabei änderte ich den Code in auth.py und fügte die erforderlichen Funktionen hinzu, damit diese Funktionalität möglich ist. Darüber hinaus habe ich sämtlichen unnötigen Code beseitigt, der aufgrund der Implementierung der Flask-Login nicht mehr nötig war, um die Codebasis sauber und wartbar zu halten. Eine kleine Anpassung des HTML Codes in der Datei login.html war auch noch erforderlich um die Checkbox für die "Remember Me" Funktion anzeigen zu lassen.
 
-## 4. Decision Record
-# Flask-Login für die Benutzerauthentifizierung in die Flask-Anwendung implementieren
+# 4. Decision Record
+## Flask-Login für die Benutzerauthentifizierung in die Flask-Anwendung implementieren
 
-# Status
+## Status
 Vorgeschlagen
 
-# Kontext
+## Kontext
 In meinem Flask-Webanwendungsprojekt verwende ich derzeit eine sitzungsbasierte Authentifizierung für die Benutzerverwaltung. Da sich die Projektanforderungen jedoch weiterentwickeln, muss der Mechanismus zur Benutzerauthentifizierung neu bewertet werden, um Sicherheit, Skalierbarkeit und Wartbarkeit zu gewährleisten.
 
-# Entscheidung
+## Entscheidung
 Nach sorgfältiger Überlegung und Bewertung habe ich mich entschieden, Flask-Login für die Benutzerauthentifizierung in meiner Flask-Anwendung zu implementieren. Diese Entscheidung ist durch mehrere Faktoren motiviert:
 
-## Sicherheit: 
+### Sicherheit: 
 Flask-Login bietet sichere Mechanismen zur Benutzerauthentifizierung, einschließlich Passwort-Hashing und Schutz vor gängigen Sicherheitslücken wie CSRF-Angriffen.
-## Skalierbarkeit: 
+### Skalierbarkeit: 
 Flask-Login vereinfacht die Verwaltung der Benutzerauthentifizierung und lässt sich nahtlos in Flask integrieren, was die Skalierung der Anwendung bei steigenden Benutzerzahlen erleichtert.
-## Wartbarkeit: 
+### Wartbarkeit: 
 Die Nutzung der in Flask-Login integrierten Funktionen für die Benutzerauthentifizierung reduziert die Komplexität der Implementierung benutzerdefinierter Authentifizierungslösungen, was zu einer besseren Codeorganisation und Wartbarkeit führt.
-## Flexibel: 
+### Flexibel: 
 Flask-Login bietet Flexibilität bei der Handhabung von Benutzersitzungen, ermöglicht die Anpassung an die Projektanforderungen und bietet Unterstützung für verschiedene Authentifizierungsmethoden.
-# Konsequenzen
+## Konsequenzen
 
-## Verbesserte Sicherheit: 
+### Verbesserte Sicherheit: 
 Die in Flask-Login eingebauten Sicherheitsfunktionen verbessern die allgemeine Sicherheitslage der Anwendung und verringern das Risiko von unbefugtem Zugriff und Datenverletzungen.
-## Vereinfachte Entwicklung: 
+### Vereinfachte Entwicklung: 
 Flask-Login vereinfacht die Verwaltung der Benutzerauthentifizierung und reduziert die Entwicklungszeit und den Aufwand für die Implementierung und Pflege der Benutzerauthentifizierungsfunktionen.
-## Lernkurve: 
+### Lernkurve: 
 Es kann einige Zeit dauern, bis ich mich mit den Funktionen und Best Practices von Flask-Login vertraut gemacht habe. Dies kann jedoch durch Schulungen und die Nutzung der verfügbaren Dokumentationsressourcen gemildert werden.
-## Aufwand für die Migration: 
+### Aufwand für die Migration: 
 Die Umstellung von der sitzungsbasierten Authentifizierung auf Flask-Login erfordert eine Aktualisierung des vorhandenen authentifizierungsbezogenen Codes und die Gewährleistung der Kompatibilität mit dem neuen Authentifizierungsmechanismus.
-# Fazit
+## Fazit
 Die Implementierung von Flask-Login als Benutzerauthentifizierungsmechanismus entspricht den Projektzielen Sicherheit, Skalierbarkeit und Wartbarkeit. Diese Entscheidung wird es mir ermöglichen, die in Flask-Login eingebauten Sicherheitsfunktionen zu nutzen, die Entwicklung zu vereinfachen und den langfristigen Erfolg und die Sicherheit meiner Flask-Anwendung zu gewährleisten.
