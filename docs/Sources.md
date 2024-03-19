@@ -6,6 +6,6 @@ nav_order: 1
 {: .label }
 Sebastian Nieme
 
-# [ Quellen]
+# [Quellen]
 {: .no_toc }
 
