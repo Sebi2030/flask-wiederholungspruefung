@@ -64,7 +64,7 @@ Die Einführung von Flask-SQLAlchemy als Datenbanklösung entspricht den Projekt
 
 
 ## 3. Flask-Login
-Um Funktionen wie Anmeldung, Registrierung und Abmeldung mit Flask-Login und mit SQLAlchemy Syntax nutzen zu können, habe diese in der auth.py-Datei umgeschrieben und angepasst. Ich habe Flask-Login genutzt, um sicherzugehen, dass ausschließlich angemeldete Benutzer Blogbeiträge erstellen, bearbeiten und löschen können. Ich habe auch eine „Remember me“-Funktionalität eingebaut, damit auch nach dem Verlassen der Website die Nutzer eingeloggt bleiben können. Dabei änderte ich den Code in auth.py und fügte die erforderlichen Funktionen hinzu, damit diese Funktionalität möglich ist. Darüber hinaus habe ich sämtlichen unnötigen Code beseitigt, der aufgrund der Implementierung der Flask-Login nicht mehr nötig war, um die Codebasis sauber und wartbar zu halten. 
+Um Funktionen wie Anmeldung, Registrierung und Abmeldung mit Flask-Login und mit SQLAlchemy Syntax nutzen zu können, habe diese in der auth.py-Datei umgeschrieben und angepasst. Ich habe Flask-Login genutzt, um sicherzugehen, dass ausschließlich angemeldete Benutzer Blogbeiträge erstellen, bearbeiten und löschen können. Ich habe auch eine „Remember me“-Funktionalität eingebaut, damit auch nach dem Verlassen der Website die Nutzer eingeloggt bleiben können. Dabei änderte ich den Code in auth.py und fügte die erforderlichen Funktionen hinzu, damit diese Funktionalität möglich ist. Darüber hinaus habe ich sämtlichen unnötigen Code beseitigt, der aufgrund der Implementierung der Flask-Login nicht mehr nötig war, um die Codebasis sauber und wartbar zu halten. Eine kleine Anpassung des HTML Codes in der Datei login.html war auch noch erforderlich um die Checkbox für die "Remember Me" Funktion anzeigen zu lassen.
 
 ## 4. Decision Record
 # Flask-Login für die Benutzerauthentifizierung in die Flask-Anwendung implementieren
@@ -93,3 +93,9 @@ Flask-Login bietet Flexibilität bei der Handhabung von Benutzersitzungen, ermö
 Die in Flask-Login eingebauten Sicherheitsfunktionen verbessern die allgemeine Sicherheitslage der Anwendung und verringern das Risiko von unbefugtem Zugriff und Datenverletzungen.
 ## Vereinfachte Entwicklung: 
 Flask-Login vereinfacht die Verwaltung der Benutzerauthentifizierung und reduziert die Entwicklungszeit und den Aufwand für die Implementierung und Pflege der Benutzerauthentifizierungsfunktionen.
+## Lernkurve: 
+Es kann einige Zeit dauern, bis ich mich mit den Funktionen und Best Practices von Flask-Login vertraut gemacht habe. Dies kann jedoch durch Schulungen und die Nutzung der verfügbaren Dokumentationsressourcen gemildert werden.
+## Aufwand für die Migration: 
+Die Umstellung von der sitzungsbasierten Authentifizierung auf Flask-Login erfordert eine Aktualisierung des vorhandenen authentifizierungsbezogenen Codes und die Gewährleistung der Kompatibilität mit dem neuen Authentifizierungsmechanismus.
+# Fazit
+Die Implementierung von Flask-Login als Benutzerauthentifizierungsmechanismus entspricht den Projektzielen Sicherheit, Skalierbarkeit und Wartbarkeit. Diese Entscheidung wird es mir ermöglichen, die in Flask-Login eingebauten Sicherheitsfunktionen zu nutzen, die Entwicklung zu vereinfachen und den langfristigen Erfolg und die Sicherheit meiner Flask-Anwendung zu gewährleisten.
