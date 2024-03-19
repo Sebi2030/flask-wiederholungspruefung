@@ -122,3 +122,8 @@ def like(post_id):
     elif like:
         db.session.delete(like)
         db.session.commit()
+    else:
+        like = Like(author=current_user, post_id=post_id)
+        db.session.add(like)
+        db.session.commit()
+    return jsonify({"likes": len(post.likes), "liked": current_user in map(lambda x: x.author, post.likes)})
