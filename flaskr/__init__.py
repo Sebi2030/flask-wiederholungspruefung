@@ -32,9 +32,12 @@ def create_app(test_config=None):
         return "Hello, World!"
 
     # register the database commands
-    from . import db
+    from .models import db,login_manager
 
     db.init_app(app)
+    login_manager.init_app(app)
+    login_manager.login_view = 'auth.login'
+    login_manager.login_message = "Please Login First"
 
     # apply the blueprints to the app
     from . import auth
