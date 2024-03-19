@@ -109,3 +109,7 @@ def delete(id):
     db.session.delete(post)
     db.session.commit()
     return redirect(url_for("blog.index"))
+
+
+@bp.route("/like-post/<post_id>", methods=['POST'])
+@login_required
