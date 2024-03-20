@@ -18,7 +18,8 @@
           <span id="likes-count-{{post.id}}">
             {{ post.likes|length }}</span> 
             {% if current_user.id in post.likes|map(attribute="author")|list %}
-            <i
+            ></i>
+            {% endif %}
           </div>
         </div>
         {% if current_user.id == post.author.id %}
