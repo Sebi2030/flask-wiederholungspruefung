@@ -41,5 +41,52 @@ Die Implementierung der "Like"-Schaltfläche mit einem clientseitigen Ansatz in 
 
 
 # Mermaid-Diagramm 
-![Diagramm](https://github.com/Sebi2030/flask-wiederholungspruefung/blob/main/docs/assets/mermaiddiagramm.png) 
+![Diagramm](https://raw.githubusercontent.com/Sebi2030/flask-wiederholungspruefung/main/docs/assets/mermaiddiagramm.png)
 
+
+## Das relationale Datenbankmodell: User, Post und Like
+
+Das vorliegende Diagramm veranschaulicht die Struktur und die Verbindungen zwischen den Entitäten User, Post und Like innerhalb eines relationalen Datenbankmodells.
+
+**Entitäten:**
+
+* **User (Benutzer):** Repräsentiert einen Nutzer der Anwendung.
+* **Post (Beitrag):** Ein Beitrag, der von einem Benutzer erstellt wurde.
+* **Like (Gefällt mir):** Ein "Gefällt mir" zu einem Beitrag.
+
+**Beziehungen:**
+
+* **Ein Benutzer kann mehrere Beiträge erstellen (1..*).**
+* **Jeder Beitrag hat einen Ersteller (1).**
+* **Ein Beitrag kann mehrere Likes erhalten (0..*).**
+* **Ein Like wird von einem Benutzer erstellt (1).**
+* **Jedes Like gehört zu einem Beitrag (1).**
+
+**Attribute:**
+
+**User:**
+
+* `id`: Eine eindeutige Identifikationsnummer des Benutzers (integer).
+* `username`: Der Benutzername (string).
+* `password`: Das Passwort (string).
+* `posts`: Die Beiträge des Benutzers (Post).
+* `likes`: Die Likes des Benutzers (Like).
+
+**Post:**
+
+* `id`: Eine eindeutige Identifikationsnummer des Beitrags (integer).
+* `created`: Zeitpunkt der Erstellung des Beitrags (timestamp).
+* `title`: Titel des Beitrags (string).
+* `body`: Inhalt des Beitrags (text).
+* `author_id`: Die ID des Benutzers, der den Beitrag erstellt hat (integer).
+* `author`: Der Benutzer, der den Beitrag erstellt hat (User).
+* `likes`: Die Likes des Beitrags (Like[]).
+
+**Like:**
+
+* `id`: Eine eindeutige Identifikationsnummer des Likes (integer).
+* `created`: Zeitpunkt, an dem das Like erstellt wurde (timestamp).
+* `author_id`: Die ID des Benutzers, der das Like erstellt hat (integer).
+* `author`: Der Benutzer, der das Like erstellt hat (User).
+* `post_id`: Die ID des Beitrags, der geliked wurde (integer).
+* `post`: Der Beitrag, der geliked wurde (Post).
