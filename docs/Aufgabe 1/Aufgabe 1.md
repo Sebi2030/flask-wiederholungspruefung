@@ -64,7 +64,15 @@ Die Einführung von Flask-SQLAlchemy als Datenbanklösung entspricht den Projekt
 
 
 # 3. Flask-Login
-Um Funktionen wie Anmeldung, Registrierung und Abmeldung mit Flask-Login und mit SQLAlchemy Syntax nutzen zu können, habe diese in der auth.py-Datei umgeschrieben und angepasst. Ich habe Flask-Login genutzt, um sicherzugehen, dass ausschließlich angemeldete Benutzer Blogbeiträge erstellen, bearbeiten und löschen können. Ich habe auch eine „Remember me“-Funktionalität eingebaut, damit auch nach dem Verlassen der Website die Nutzer eingeloggt bleiben können. Dabei änderte ich den Code in auth.py und fügte die erforderlichen Funktionen hinzu, damit diese Funktionalität möglich ist. Darüber hinaus habe ich sämtlichen unnötigen Code beseitigt, der aufgrund der Implementierung der Flask-Login nicht mehr nötig war, um die Codebasis sauber und wartbar zu halten. Eine kleine Anpassung des HTML Codes in der Datei login.html war auch noch erforderlich um die Checkbox für die "Remember Me" Funktion anzeigen zu lassen. In der Datei base.html wurde noch die weiterleitung zu add Post hinzugefügt. Es kam zu einigen Komplikationen bezüglich der Anpassung der index.html datei. Diese konnten aber nach einiger Zeit und recherchen erfolgreich überwunden werden.
+Um Funktionen wie Anmeldung, Registrierung und Abmeldung mit Flask-Login und SQLAlchemy nutzen zu können, habe ich diese in der auth.py-Datei umgeschrieben und angepasst, wobei ich mich stark auf die Datenbankinteraktion mittels SQLAlchemy konzentriert habe.
+
+Für die Benutzerregistrierung habe ich SQLAlchemy-Methode filter_by genutzt, um zu überprüfen, ob der Benutzername bereits in der Datenbank vorhanden ist. Falls nicht, habe ich einen neuen Benutzer mit der Methode add zur Datenbank hinzugefügt. Dabei habe ich das Passwort mithilfe der generate_password_hash-Funktion gehasht, um die Sicherheit zu gewährleisten.
+
+Bei der Benutzeranmeldung habe ich die eingegebenen Anmeldeinformationen mit den in der Datenbank gespeicherten verglichen. Hierbei habe ich zuerst den Benutzer mithilfe von filter_by abgerufen und dann das eingegebene Passwort mit dem gehashten Passwort in der Datenbank mittels check_password_hash verglichen. Wenn die Überprüfung erfolgreich war, habe ich die Benutzer-ID in der Sitzung gespeichert, um den Benutzer als angemeldet zu markieren.
+
+Zusätzlich zur Datenbankinteraktion habe ich unnötigen Code entfernt, der durch die Implementierung von Flask-Login. Dazu gehörten auch Anpassungen des HTML-Codes, wie das Hinzufügen der Checkbox für die "Remember Me"-Funktionalität in login.html. In der base.html-Datei habe ich außerdem die Weiterleitung zur add Post-Funktion hinzugefügt.
+
+Während des Prozesses gab es einige Herausforderungen bei der Anpassung der index.html-Datei, die jedoch erfolgreich gelöst wurden, um eine reibungslose Integration der neuen Funktionen zu gewährleisten.
 
 # 4. Decision Record
 ## Flask-Login für die Benutzerauthentifizierung in die Flask-Anwendung implementieren
