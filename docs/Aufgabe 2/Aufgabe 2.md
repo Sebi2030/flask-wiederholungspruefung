@@ -41,5 +41,5 @@ Die Implementierung der "Like"-Schaltfläche mit einem clientseitigen Ansatz in 
 
 
 # Mermaid-Diagramm 
-![Diagramm](/docs/assets/mermaiddiagramm.png) 
+![Diagramm](https://github.com/Sebi2030/flask-wiederholungspruefung/blob/main/docs/assets/mermaiddiagramm.png) 
 
