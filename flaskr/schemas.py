@@ -6,3 +6,9 @@ class PostSchema(Schema):
     body = fields.Str(required=True)
     created = fields.DateTime(dump_only=True)
     author_id = fields.Int(required=True)
+
+class PostUpdateSchema(Schema):
+    title = fields.Str()
+    body = fields.Str()
+    author_id = fields.Int()
+    
