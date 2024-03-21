@@ -16,10 +16,10 @@ Sebastian Nieme
 {: toc }
 </details>
 
-## [7. Erstellen Sie ein RESTful API]
+## 7. Erstellen Sie ein RESTful API
 
-## [8. Decision Record]
+## 8. Decision Record
 
-## [9. API-Referenz-Dokumentation] 
+## 9. API-Referenz-Dokumentation
 
 
