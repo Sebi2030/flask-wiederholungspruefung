@@ -37,6 +37,9 @@ def create_app(test_config=None):
     app.config["API_VERSION"] = "v1"
     app.config["OPENAPI_VERSION"] = "3.0.2"
     app.config["OPENAPI_URL_PREFIX"] = "/"
+    app.config["OPENAPI_SWAGGER_UI_PATH"] = "/swagger-ui"
+    app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
+    api = Api(app)
 
     # register the database commands
     from .models import db,login_manager
