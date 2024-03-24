@@ -24,3 +24,7 @@ class Posts(MethodView):
         db.session.commit()
         return new
     
+    @blp.route("/<post_id>")
+    class PostsById(MethodView):
+    @blp.response(200, PostSchema)
+    def get(self, post_id):
