@@ -11,3 +11,6 @@ class Posts(MethodView):
     def get(self):
         """List posts"""
         return Post.query.all()
+    
+    @blp.arguments(PostSchema)
+    @blp.response(201, PostSchema)
