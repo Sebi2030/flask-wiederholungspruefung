@@ -17,3 +17,10 @@ class Posts(MethodView):
 
     def post(self, new_data):
         """Add a new post"""
+         if 'author_id' in new_data and not User.query.filter_by(id=new_data['author_id']).first():
+            abort(400, message="author_id doesn't exists")       
+        new_post = Post(**new_data)
+        db.session.add(new_post)
+        db.session.commit()
+        return new
+    
