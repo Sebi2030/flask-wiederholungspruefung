@@ -28,3 +28,8 @@ class Posts(MethodView):
     class PostsById(MethodView):
     @blp.response(200, PostSchema)
     def get(self, post_id):
+       """Get post by ID"""
+        post = Post.query.filter_by(id=post_id).first()
+        if post:
+            return post
+        abort(404, message="Post not found")
