@@ -14,3 +14,6 @@ class Posts(MethodView):
     
     @blp.arguments(PostSchema)
     @blp.response(201, PostSchema)
+
+    def post(self, new_data):
+        """Add a new post"""
