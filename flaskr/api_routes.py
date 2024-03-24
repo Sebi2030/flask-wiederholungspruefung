@@ -6,3 +6,5 @@ from .schemas import PostSchema, PostUpdateSchema
 blp = Blueprint("posts", "posts", url_prefix="/posts", description="Operations on blog posts")
 
 @blp.route("/")
+class Posts(MethodView):
+    @blp.response(200, postSchema(many=True))
