@@ -37,3 +37,7 @@ class Posts(MethodView):
      @blp.arguments(PostUpdateSchema)
      @blp.response(200, PostSchema)
      def patch(self, update_data, post_id):
+       """Update existing post"""
+        post = Post.query.filter_by(id=post_id).first()
+        if 'author_id' in update_data and not User.query.filter_by(id=update_data['author_id']).first():
+            abort(400, message="author_id doesn't exists")
