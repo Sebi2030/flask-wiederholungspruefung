@@ -33,3 +33,7 @@ class Posts(MethodView):
         if post:
             return post
         abort(404, message="Post not found")
+       
+     @blp.arguments(PostUpdateSchema)
+     @blp.response(200, PostSchema)
+     def patch(self, update_data, post_id):
