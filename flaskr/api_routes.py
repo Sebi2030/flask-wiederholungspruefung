@@ -41,3 +41,10 @@ class Posts(MethodView):
         post = Post.query.filter_by(id=post_id).first()
         if 'author_id' in update_data and not User.query.filter_by(id=update_data['author_id']).first():
             abort(400, message="author_id doesn't exists")
+        if post:
+            for key, value in update_data.items():
+                setattr(post, key, value)
+            # Commit the changes to the database
+            db.session.commit()
+            return post
+        abort(404, message="Post not found")
