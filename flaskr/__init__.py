@@ -41,6 +41,10 @@ def create_app(test_config=None):
     app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
     api = Api(app)
 
+    # apply the blueprints to the app
+    from . import auth
+    from . import blog
+
     # register the database commands
     from .models import db,login_manager
 
