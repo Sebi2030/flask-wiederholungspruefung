@@ -17,7 +17,7 @@ class Posts(MethodView):
 
     def post(self, new_data):
         """Add a new post"""
-         if 'author_id' in new_data and not User.query.filter_by(id=new_data['author_id']).first():
+        if 'author_id' in new_data and not User.query.filter_by(id=new_data['author_id']).first():
             abort(400, message="author_id doesn't exists")       
         new_post = Post(**new_data)
         db.session.add(new_post)
@@ -29,8 +29,8 @@ class Posts(MethodView):
     @blp.response(200, PostSchema)
     def get(self, post_id):
        """Get post by ID"""
-        post = Post.query.filter_by(id=post_id).first()
-        if post:
+       post = Post.query.filter_by(id=post_id).first()
+       if post:
             return post
         abort(404, message="Post not found")
        
@@ -38,8 +38,8 @@ class Posts(MethodView):
      @blp.response(200, PostSchema)
      def patch(self, update_data, post_id):
        """Update existing post"""
-        post = Post.query.filter_by(id=post_id).first()
-        if 'author_id' in update_data and not User.query.filter_by(id=update_data['author_id']).first():
+       post = Post.query.filter_by(id=post_id).first()
+       if 'author_id' in update_data and not User.query.filter_by(id=update_data['author_id']).first():
             abort(400, message="author_id doesn't exists")
         if post:
             for key, value in update_data.items():
