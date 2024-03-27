@@ -47,7 +47,7 @@ def create_app(test_config=None):
 
     app.register_blueprint(auth.bp)
     app.register_blueprint(blog.bp)
-    
+
     # register the database commands
     from .models import db,login_manager
 
@@ -62,6 +62,9 @@ def create_app(test_config=None):
 
     app.register_blueprint(auth.bp)
     app.register_blueprint(blog.bp)
+
+    from . import api_routes
+    api.register_blueprint(api_routes.blp)
 
     # make url_for('index') == url_for('blog.index')
     # in another app, you might define a separate main index here with
