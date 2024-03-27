@@ -7,7 +7,7 @@ blp = Blueprint("posts", "posts", url_prefix="/posts", description="Operations o
 
 @blp.route("/")
 class Posts(MethodView):
-    @blp.response(200, postSchema(many=True))
+    @blp.response(200, PostSchema(many=True))
     def get(self):
         """List posts"""
         return Post.query.all()
