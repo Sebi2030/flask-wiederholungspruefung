@@ -48,3 +48,8 @@ class Posts(MethodView):
             db.session.commit()
             return post
         abort(404, message="Post not found")
+       
+    @blp.response(204)
+    def delete(self, post_id):
+        """Delete post"""
+        post = Post.query.filter_by(id=post_id).first()
