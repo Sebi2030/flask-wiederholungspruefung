@@ -53,3 +53,8 @@ class Posts(MethodView):
     def delete(self, post_id):
         """Delete post"""
         post = Post.query.filter_by(id=post_id).first()
+        if post:
+            Post.query.filter_by(id=post_id).delete()
+            db.session.commit()
+            return {"message": "Post deleted."}
+        abort(404, message="Post not found.")
