@@ -17,7 +17,7 @@ Sebastian Nieme
 </details>
 
 ## 7. Erstellen Sie eine RESTful API
-Ich habe die API durch eine schrittweise Vorgehensweise erstellt, beginnend mit der Erstellung der grundlegenden Struktur und Konfiguration. Dazu gehörte die Einrichtung der Dateien api_routes.py, schemas.py und die Konfiguration für OpenAPI Swagger UI. Ich habe sicherzustellen müssen, dass alle benötigten Importanweisungen vorhanden sind, um auf Flask-Views, Flask-Smorest Blueprint, Modelle und Schemas zuzugreifen.
+Ich habe die API durch eine schrittweise Vorgehensweise erstellt, beginnend mit der Erstellung der grundlegenden Struktur und Konfiguration. Dazu gehörte die Einrichtung der Dateien api_routes.py, schemas.py und die Konfiguration für OpenAPI Swagger UI. Ich habe sicherzustellen müssen, dass alle benötigten Importanweisungen vorhanden sind, um auf Flask-Views, Flask-Smorest Blueprint, Modelle und Schemas zuzugreifen. Als nächstes habe ich die Schemas PostSchema und PostUpdateSchema erstellt, um die Daten zu validieren und zwischen der API und der Datenbank zu serialisieren und zu deserialisieren. Dabei habe ich auch die Validierung von Feldern in PostUpdateSchema implementiert, um sicherzustellen, dass nur gültige Daten akzeptiert werden.
 
 ## 8. Decision Record
 
