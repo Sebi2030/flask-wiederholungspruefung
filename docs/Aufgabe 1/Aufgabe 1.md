@@ -19,7 +19,7 @@ Sebastian Nieme
 # 1. SQLAlchemy
 Zuerst habe ich Flask-SQLAlchemy und Flask-Login installiert, um die Interaktion mit der Datenbank und die Benutzerauthentifizierung zu erleichtern.
 
- Ich habe eine model.py-Datei im Verzeichnis flaskr erstellt. Dies ermöglicht eine bessere Organisation der Datenbankmodelle und der Authentifizierungsfunktionen an einem zentralen Ort.
+Ich habe eine model.py-Datei im Verzeichnis flaskr erstellt. Dies ermöglicht eine bessere Organisation der Datenbankmodelle und der Authentifizierungsfunktionen an einem zentralen Ort.
 
 In der model.py-Datei habe ich Flask-SQLAlchemy und Flask-Login initialisiert. Anschließend habe ich die Modelle für Benutzer, Blog-Posts und Likes definiert. Zusätzlich habe ich den Login-Manager initialisiert und den aktuellen Benutzer über die Benutzer-ID im Login-Manager geladen, um eine nahtlose Authentifizierung zu gewährleisten.
 
@@ -44,7 +44,7 @@ Flask-SQLAlchemy integriert nahtlos mit Flask und bietet umfangreiche Unterstüt
 ### Skalierbarkeit: 
 Während SQLite3 für kleine Anwendungen geeignet ist, bietet Flask-SQLAlchemy bessere Skalierbarkeit und Leistungsoptimierungen, was es für größere Projekte mit höheren Anforderungen an die Parallelität geeigneter macht.
 ### Community-Unterstützung: 
-Flask-SQLAlchemy verfügt über eine lebhafte Community und umfangreiche Dokumentation, die Ressourcen und Unterstützung für die Fehlerbehebung und Implementierung von bewährten Verfahren bereitstellt.
+Flask-SQLAlchemy verfügt über eine große Community und umfangreiche Dokumentation, die Ressourcen und Unterstützung für die Fehlerbehebung und Implementierung von bewährten Verfahren bereitstellt.
 ### Codeorganisation:
 Die Nutzung der ORM-Fähigkeiten von Flask-SQLAlchemy führt zu einer besseren Codeorganisation und -wartbarkeit, was die Komplexität des mit der Datenbank verbundenen Codes reduziert und die Gesamtwartbarkeit des Projekts verbessert.
 
