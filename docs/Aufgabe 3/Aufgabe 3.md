@@ -49,6 +49,9 @@ Die Entscheidung für Flask-Smorest als Basis für unsere RESTful API in Flask h
 
 # 9. API-Referenz-Dokumentation
 
+Ich habe die Entwicklung meiner RESTful API mithilfe von Swagger UI vereinfacht. Mit der Swagger UI ist es möglich, API-Endpunkte interaktiv zu erkunden und zu testen. Dies half mir dabei, die API schneller kennenzulernen und ihre Funktionen zu begreifen. Zusätzlich ermöglicht Swagger UI eine automatisch erstellte interaktive API-Dokumentation, die auf den im Code festgelegten Annotationen und Kommentaren basiert. Auf diese Weise konnte ich eine einheitliche und klar strukturierte Dokumentation erstellen, die bei Codeänderungen regelmäßig aktualisiert wird. Die Bereitstellung und Nutzung meiner API wurden durch Swagger UI insgesamt vereinfacht, da es eine eindeutige und gut dokumentierte Schnittstelle zwischen Client und Server zur Verfügung stellte.
+Die Dokumentation ist sobald die Blog-Anwendung gestartet wurde hier aufrufbar:
 
+[http://127.0.0.1:5000/swagger-ui](http://127.0.0.1:5000/swagger-ui)
 
 
