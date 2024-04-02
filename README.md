@@ -45,3 +45,7 @@ $ python start.py / python3 start.py
 
 # Blog-Anwendung im Browser öffnen
 [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+
+ Die API und die dazugehörige Dokumentation ist unter diesem Link aufrufbar:
+
+ [http://127.0.0.1:5000/swagger-ui](http://127.0.0.1:5000/swagger-ui)
