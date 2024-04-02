@@ -47,6 +47,8 @@ Die Entscheidung für Flask-Smorest als Basis für unsere RESTful API in Flask h
 4.	Langfristige Unterstützung: Da Flask-Smorest aktiv entwickelt wird, kann ich sicher sein, dass wir langfristig Unterstützung und Aktualisierungen für unsere API erhalten, um sicherzustellen, dass sie mit zukünftigen Versionen von Flask und anderen Abhängigkeiten kompatibel ist.
 
 
-## 9. API-Referenz-Dokumentation
+# 9. API-Referenz-Dokumentation
+
+
 
 
