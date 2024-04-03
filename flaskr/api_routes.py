@@ -35,7 +35,11 @@ class Posts(MethodView):
     class PostsById(MethodView):
         @blp.response(200, PostSchema)
         def get(self, post_id):
-            """Get post by ID"""
+            """Get post by ID
+
+            Retrieve a specific blog post from the database by its unique ID.
+            This endpoint allows users to view a particular article by providing its ID.
+            """
             post = Post.query.filter_by(id=post_id).first()
             if post:
                 return post
@@ -63,7 +67,12 @@ class Posts(MethodView):
        
         @blp.response(204)
         def delete(self, post_id):
-            """Delete post"""
+            """
+            Delete post
+
+            Delete a blog post from the database.
+            This endpoint allows users to remove an article from the blog.
+            """
             post = Post.query.filter_by(id=post_id).first()
             if post:
                 Post.query.filter_by(id=post_id).delete()
