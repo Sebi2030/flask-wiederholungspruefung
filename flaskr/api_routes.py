@@ -19,7 +19,11 @@ class Posts(MethodView):
     @blp.arguments(PostSchema)
     @blp.response(201, PostSchema)
     def post(self, new_data):
-        """Add a new post"""
+        """Add a new post
+
+        Add a new blog post to the database.
+        This endpoint allows users to create and publish new articles on the blog.
+        """
         if 'author_id' in new_data and not User.query.filter_by(id=new_data['author_id']).first():
             abort(400, message="author_id doesn't exists")       
         new_post = Post(**new_data)
