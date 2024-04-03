@@ -9,7 +9,11 @@ blp = Blueprint("posts", "posts", url_prefix="/posts", description="Operations o
 class Posts(MethodView):
     @blp.response(200, PostSchema(many=True))
     def get(self):
-        """List posts"""
+        """List all posts
+
+        Retrieve a list of all blog posts available in the database.
+        This endpoint provides a way to see what articles are available to read, including their titles, authors, publication dates, and content snippets.
+        """
         return Post.query.all()
     
     @blp.arguments(PostSchema)
