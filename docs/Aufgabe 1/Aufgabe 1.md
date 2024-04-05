@@ -6,7 +6,7 @@ nav_order: 1
 {: .label }
 Sebastian Nieme
 
-# [Aufgabe 1/3: SQLAlchemy und Flask-Login]
+# Aufgabe 1/3: SQLAlchemy und Flask-Login
 {: .no_toc }
 
 <details open markdown="block">

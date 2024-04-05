@@ -6,7 +6,7 @@ nav_order: 1
 {: .label }
 Sebastian Nieme
 
-# [Aufgabe 3/3:  RESTful API]
+# Aufgabe 3/3:  RESTful API
 {: .no_toc }
 
 <details open markdown="block">

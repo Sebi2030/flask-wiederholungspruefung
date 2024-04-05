@@ -6,7 +6,7 @@ nav_order: 1
 {: .label }
 Sebastian Nieme
 
-# [Aufgabe 2/3: Like-Button]
+# Aufgabe 2/3: Like-Button
 {: .no_toc }
 
 <details open markdown="block">
